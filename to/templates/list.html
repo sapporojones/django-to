@@ -1,0 +1,20 @@
+  
+{% extends 'base.html' %}
+
+{% block content %}
+      <h2>To Do:</h2>
+      {% for x in dolist %}
+
+   		<a href = "{{x.url}}">{{x.name}}</a><br>
+   	{% endfor %}
+   	<br><br><h2>To Download:</h2>
+   	{% for x in dllist %}
+   		<a href = "{{x.url}}">{{x.name}}</a><br>
+   	{% endfor %}
+   	<br><br><h2>To Buy:</h2>
+   	{% for x in buylist %}
+   		<a href = "{{x.url}}">{{x.name}}</a><br>
+   	{% endfor %}
+   	<br><br>
+
+{% endblock %}
