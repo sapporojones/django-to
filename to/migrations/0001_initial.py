@@ -7,17 +7,31 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='MasterList',
+            name="MasterList",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=250)),
-                ('url', models.CharField(max_length=250)),
-                ('category', models.CharField(choices=[('TODO', 'Do'), ('TODL', 'DL'), ('TBUY', 'Buy')], default='TOBUY', max_length=4)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=250)),
+                ("url", models.CharField(max_length=250)),
+                (
+                    "category",
+                    models.CharField(
+                        choices=[("TODO", "Do"), ("TODL", "DL"), ("TBUY", "Buy")],
+                        default="TOBUY",
+                        max_length=4,
+                    ),
+                ),
             ],
         ),
     ]
